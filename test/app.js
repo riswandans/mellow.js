@@ -8,7 +8,10 @@ route('/page', 'page.html');
 route('/test', 'test.html');
 
 function main() {
-    setTitle("Hello World");
+    // Load class App
+    var app = new App();
+    // Set Title
+    app.setTitle("Hello World");
 }
 
 // Load 'main' function when document page ready

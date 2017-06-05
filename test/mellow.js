@@ -47,10 +47,15 @@ function ready (func) {
 }
 
 /* Template function */
-function setTitle(name) {
-    return document.title = name;
-}
-
-function setBackground(color) {
-    return document.body.style.backgroundColor = color;
+class App {
+    constructor() {
+        
+    }
+    setTitle (name) {
+        return document.title = name;
+    }
+    
+    setBackground(color) {
+        return document.body.style.backgroundColor = color;
+    }
 }
