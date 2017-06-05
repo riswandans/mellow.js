@@ -8,9 +8,8 @@ route('/page', 'page.html');
 route('/test', 'test.html');
 
 function main() {
-    // Load class App
-    var app = new App();
-    // Set Title
+    // Load class App and Set Title
+    const app = new App();
     app.setTitle("Hello World");
 }
 
