@@ -21,8 +21,10 @@ route('/page', 'page.html');
 route('/test', 'test.html');
 
 function main() {
+    // Load class App
+    var app = new App();
     // Set Title
-    setTitle("Hello World");
+    app.setTitle("Hello World");
 }
 
 // Load 'main' function when document page ready
