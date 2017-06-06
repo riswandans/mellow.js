@@ -22,7 +22,7 @@ route('/test', 'test.html');
 
 function main() {
     // Load class App
-    var app = new App();
+    const app = new App();
     // Set Title
     app.setTitle("Hello World");
 }
