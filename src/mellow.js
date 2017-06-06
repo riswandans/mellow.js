@@ -59,3 +59,31 @@ class App {
         return document.body.style.backgroundColor = color;
     }
 }
+
+class Http {
+    constructor() {
+
+    }
+    get (url) {
+        var app = new XMLHttpRequest();
+        app.open('GET', url, true);
+        app.onreadystatechange = function() {
+        if (this.readyState !== 4) return;
+        if (this.status !== 200) return;
+            return this.responseText;
+        };
+        app.send();
+    }
+    
+    post (url, params) {
+        var app = new XMLHttpRequest();
+        app.open('POST', url, true);
+        app.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        app.onreadystatechange = function() {
+        if (this.readyState !== 4) return;
+        if (this.status !== 200) return;
+            return this.responseText;
+        };
+        app.send(params);
+    }
+}
