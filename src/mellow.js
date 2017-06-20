@@ -91,3 +91,18 @@ class Http {
         app.send(params);
     }
 }
+
+class Storage {
+
+    add (key, value) {
+        localStorage.setItem(key, value);
+    }
+    
+    get (key) {
+        return localStorage.getItem(key);
+    }
+    
+    remove (key) {
+        localStorage.removeItem(key);
+    }
+}
