@@ -58,6 +58,10 @@ class App {
     setBackground(color) {
         return document.body.style.backgroundColor = color;
     }
+    
+    location(link) {
+        return location.hash.slice(1);
+    }
 }
 
 class Http {
