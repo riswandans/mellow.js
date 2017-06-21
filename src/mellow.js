@@ -43,13 +43,14 @@ String.prototype.replaceAll = function(search, replace) {
 }
 
 function ready (func) {
-    return window.addEventListener('load', func);
+    window.addEventListener('hashchange', func);
+    window.addEventListener('load', func);
 }
 
 /* Template function */
 class App {
     constructor() {
-        
+        this.location = location.hash.slice(1);
     }
     setTitle (name) {
         return document.title = name;
@@ -58,10 +59,7 @@ class App {
     setBackground(color) {
         return document.body.style.backgroundColor = color;
     }
-    
-    location(link) {
-        return location.hash.slice(1);
-    }
+  
 }
 
 class Http {
