@@ -5,7 +5,7 @@
 */
 route('/', 'index.html');
 route('/page', 'page.html');
-route('/test', 'test.html');
+route('/test', "test.html");
 
 function main() {
     // Load class App and Set Title

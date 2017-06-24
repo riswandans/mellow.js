@@ -104,3 +104,17 @@ class Storage {
         localStorage.removeItem(key);
     }
 }
+
+class Validator {
+
+    email (mail) {
+        var tag = mail.indexOf("@");
+        var split = mail.lastIndexOf(".");
+        if (tag<1 || split<tag+2 || split+2>=mail.length) {
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+}
