@@ -8,6 +8,7 @@ Mellow.js is a micro-framework javascript library for building static web applic
 - Routing
 - Views
 - Local Storage
+- Validator
 - Fast & Reliable
 
 ### Example app.js
