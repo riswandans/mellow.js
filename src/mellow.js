@@ -116,5 +116,13 @@ class Validator {
             return true;
         }
     }
+    
+    number (num) {
+        if (isNaN(num) || num < 1 || num > 10) {
+            return false;
+        }else{
+           return true;
+        }
+    }
 
 }
