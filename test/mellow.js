@@ -25,14 +25,19 @@ window.addEventListener('load', router);
  * This function for load and compile template
 */
 function render (id, file) {
-    var app = new XMLHttpRequest();
-    app.open('GET', path + '/' + file, true);
-    app.onreadystatechange = function() {
-    if (this.readyState !== 4) return;
-    if (this.status !== 200) return;
-        document.getElementById(id).innerHTML = this.responseText;
-    };
-    app.send();
+    var files = file.slice((Math.max(0, file.lastIndexOf(".")) || Infinity) + 1);
+    if(files == "") {
+        document.getElementById(id).innerHTML = file;
+    }else{
+        var app = new XMLHttpRequest();
+        app.open('GET', path + '/' + file, true);
+        app.onreadystatechange = function() {
+        if (this.readyState !== 4) return;
+        if (this.status !== 200) return;
+            document.getElementById(id).innerHTML = this.responseText;
+        };
+        app.send();
+    }
 }
 
 String.prototype.replaceAll = function(search, replace) {
