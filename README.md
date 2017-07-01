@@ -32,6 +32,14 @@ route('/test', 'test.html');
 function main() {
     const app = new App();
     app.setTitle("Hello World");
+    
+    if(app.location == '/page') {
+        app.setTitle("Page");
+    }
+    
+    if(app.location == '/test') {
+        app.setTitle("Test");
+    }
 }
 
 ready(main);
